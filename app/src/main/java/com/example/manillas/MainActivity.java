@@ -47,50 +47,65 @@ public class MainActivity extends AppCompatActivity {
     public void calcular(View v){
         int canti,mate,dij,tipo,mone;
         double resul=0,total=0;
-        mate=combomat.getSelectedItemPosition();
-        dij=combodije.getSelectedItemPosition();
-        tipo=combotip.getSelectedItemPosition();
-        mone=combomon.getSelectedItemPosition();
-        canti=Integer.parseInt(cant.getText().toString());
-        if(mate==0){//Material: Cuero
-            if(dij==0){//Dije: Martillo
-                if(tipo==0 || tipo==1){ //Tipo: Oro o Oro Rosado
-                    resul=100;
-                }if(tipo==2){//Tipo: Plata
-                    resul=80;
-                }if(tipo==3){//Tipo: Niquel
-                    resul=70;
-                }}
-            if(dij==1){//Ancla
-                if(tipo==0 || tipo==1){//Tipo: Oro o Oro Rosado
-                    resul=120;
-                }if(tipo==2){//Tipo: Plata
-                    resul=100;
-                }if(tipo==3){//Tipo: Niquel
-                    resul=90;
-                }}
-        }if(mate==1){//Material: Cuerda
-            if(dij==0){//Dije: Martillo
-                if(tipo==0 || tipo==1){ //Tipo: Oro o Oro Rosado
-                    resul=90;
-                }if(tipo==2){//Tipo: Plata
-                    resul=70;
-                }if(tipo==3){//Tipo: Niquel
-                    resul=50;
-                }}
-            if(dij==1){//Ancla
-                if(tipo==0 || tipo==1){//Tipo: Oro o Oro Rosado
-                    resul=110;
-                }if(tipo==2){//Tipo: Plata
-                    resul=90;
-                }if(tipo==3){//Tipo: Niquel
-                    resul=80;
-                }}}
-        total=resul*canti;
-        if(mone==1){
-            double resul1=total*3200;//conversion de divisa
-            resultado.setText("COP $"+resul);
-        }else{
-        resultado.setText("US $"+total);}
+        if(validar()){ mate=combomat.getSelectedItemPosition();
+            dij=combodije.getSelectedItemPosition();
+            tipo=combotip.getSelectedItemPosition();
+            mone=combomon.getSelectedItemPosition();
+            canti=Integer.parseInt(cant.getText().toString());
+            if(mate==0){//Material: Cuero
+                if(dij==0){//Dije: Martillo
+                    if(tipo==0 || tipo==1){ //Tipo: Oro o Oro Rosado
+                        resul=100;
+                    }if(tipo==2){//Tipo: Plata
+                        resul=80;
+                    }if(tipo==3){//Tipo: Niquel
+                        resul=70;
+                    }}
+                if(dij==1){//Ancla
+                    if(tipo==0 || tipo==1){//Tipo: Oro o Oro Rosado
+                        resul=120;
+                    }if(tipo==2){//Tipo: Plata
+                        resul=100;
+                    }if(tipo==3){//Tipo: Niquel
+                        resul=90;
+                    }}
+            }if(mate==1){//Material: Cuerda
+                if(dij==0){//Dije: Martillo
+                    if(tipo==0 || tipo==1){ //Tipo: Oro o Oro Rosado
+                        resul=90;
+                    }if(tipo==2){//Tipo: Plata
+                        resul=70;
+                    }if(tipo==3){//Tipo: Niquel
+                        resul=50;
+                    }}
+                if(dij==1){//Ancla
+                    if(tipo==0 || tipo==1){//Tipo: Oro o Oro Rosado
+                        resul=110;
+                    }if(tipo==2){//Tipo: Plata
+                        resul=90;
+                    }if(tipo==3){//Tipo: Niquel
+                        resul=80;
+                    }}}
+            total=resul*canti;
+            if(mone==1){
+                double resul1=total*3200;//conversion de divisa
+                resultado.setText("COP $"+resul);
+            }else{
+                resultado.setText("US $"+total);}}
+
+    }
+
+    public boolean validar(){
+        if(cant.getText().toString().isEmpty()){
+            cant.setError(getString(R.string.mensaje_error_cantidad));
+            cant.requestFocus();
+            return false;
+        }
+        if(0>=Integer.parseInt(cant.getText().toString())){
+            cant.setError(getString(R.string.mensaje_error_cantida_negativa));
+            cant.requestFocus();
+            return false;
+        }
+        return true;
     }
 }

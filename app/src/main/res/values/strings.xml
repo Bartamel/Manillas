@@ -6,6 +6,8 @@
     <string name="tipo">Tipo</string>
     <string name="cantidad">Cantidad</string>
     <string name="calcular">Calcular</string>
+    <string name="mensaje_error_cantidad">Digite la cantidad</string>
+    <string name="mensaje_error_cantida_negativa">Ingrese un valor mayor que 1</string>
     <string-array name="materiales">
         <item>Cuero</item>
         <item>Cuerda</item>
