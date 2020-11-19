@@ -6,4 +6,22 @@
     <string name="tipo">Tipo</string>
     <string name="cantidad">Cantidad</string>
     <string name="calcular">Calcular</string>
+    <string-array name="materiales">
+        <item>Cuero</item>
+        <item>Cuerda</item>
+    </string-array>
+    <string-array name="dije">
+        <item>Martillo</item>
+        <item>Ancla</item>
+    </string-array>
+    <string-array name="tipo">
+        <item>Oro</item>
+        <item>Oro Rosado</item>
+        <item>Plata</item>
+        <item>Niquel</item>
+    </string-array>
+    <string-array name="moneda">
+        <item>Dolar</item>
+        <item>Pesos Colombianos</item>
+    </string-array>
 </resources>
