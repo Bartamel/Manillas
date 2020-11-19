@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Manillas</string>
+    <string name="titulo">MANILLAS</string>
+    <string name="material">Material</string>
+    <string name="dije">Dije</string>
+    <string name="tipo">Tipo</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="calcular">Calcular</string>
+</resources>
