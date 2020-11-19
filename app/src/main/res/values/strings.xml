@@ -8,19 +8,27 @@
     <string name="calcular">Calcular</string>
     <string name="mensaje_error_cantidad">Digite la cantidad</string>
     <string name="mensaje_error_cantida_negativa">Ingrese un valor mayor que 1</string>
+    <string name="cuero">Cuero</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
+    <string name="oro">Oro</string>
+    <string name="oro_rosado">Oro Rosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
     <string-array name="materiales">
-        <item>Cuero</item>
-        <item>Cuerda</item>
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
     </string-array>
     <string-array name="dije">
-        <item>Martillo</item>
-        <item>Ancla</item>
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
     </string-array>
     <string-array name="tipo">
-        <item>Oro</item>
-        <item>Oro Rosado</item>
-        <item>Plata</item>
-        <item>Niquel</item>
+        <item>@string/oro</item>
+        <item>@string/oro_rosado</item>
+        <item>@string/plata</item>
+        <item>@string/niquel</item>
     </string-array>
     <string-array name="moneda">
         <item>Dolar</item>

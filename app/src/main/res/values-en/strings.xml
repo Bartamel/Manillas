@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Manillas</string>
+    <string name="titulo">HANDLES</string>
+    <string name="material">Material</string>
+    <string name="dije">Pendant</string>
+    <string name="tipo">Type</string>
+    <string name="cantidad">Amount</string>
+    <string name="calcular">Calculate</string>
+    <string name="mensaje_error_cantidad">Type the amount</string>
+    <string name="mensaje_error_cantida_negativa">Type a value greater than 1</string>
+    <string name="cuero">Leather</string>
+    <string name="cuerda">Rope</string>
+    <string name="martillo">Hammer</string>
+    <string name="ancla">Anchor</string>
+    <string name="oro">Gold</string>
+    <string name="oro_rosado">Pink Gold</string>
+    <string name="plata">Silver</string>
+    <string name="niquel">Nickel</string>
+</resources>

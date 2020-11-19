@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         combomon.setAdapter(adapter4);
     }
     public void calcular(View v){
-        int canti,mate,dij,tipo,mone;
-        double resul=0,total=0;
+        int canti,mate,dij,tipo,mone,total,resul=0;
+
         if(validar()){ mate=combomat.getSelectedItemPosition();
             dij=combodije.getSelectedItemPosition();
             tipo=combotip.getSelectedItemPosition();
@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     }}}
             total=resul*canti;
             if(mone==1){
-                double resul1=total*3200;//conversion de divisa
-                resultado.setText("COP $"+resul);
+                int resul1=total*3200;//conversion de divisa
+                resultado.setText("COP $"+resul1);
             }else{
                 resultado.setText("US $"+total);}}
 
